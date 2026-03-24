@@ -1,13 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>flower-scroll</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Scroll Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Paysage & Arrière-plan -->
+    <div class="landscape-container">
+        <div class="sunset-gradient"></div>
+        <div class="ground"></div>
+    </div>
+
+    <!-- Section de Scroll avec la Fleur et les Pigeons -->
+    <div class="scroll-section">
+        <div class="flower-container">
+            <object data="public/Svg scroll/fleur.svg" type="image/svg+xml" class="flower"></object>
+        </div>
+
+        <!-- Pigeons Container -->
+        <div class="pigeons-container">
+            <object data="public/Svg scroll/pigeon1.svg" type="image/svg+xml" class="pigeon pigeon1"></object>
+            <object data="public/Svg scroll/pigeon2.svg" type="image/svg+xml" class="pigeon pigeon2"></object>
+        </div>
+
+        <!-- Poop/Crotte -->
+        <div class="poop-container">
+            <div class="poop" id="poop1"></div>
+            <div class="poop" id="poop2"></div>
+            <div class="poop" id="poop3"></div>
+            <div class="poop" id="poop4"></div>
+        </div>
+    </div>
+
+    <!-- Page très longue pour le scroll -->
+    <div class="spacer"></div>
+
+    <script src="script.js"></script>
+</body>
 </html>

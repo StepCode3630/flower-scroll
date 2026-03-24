@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    background: #ffffff;
+}
+
+/* Landscape & Background */
+.landscape-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.sunset-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, 
+        #87CEEB 0%,      /* Sky Blue */
+        #FFE4B5 40%,     /* Moccasin */
+        #FFB347 70%,     /* Light Orange */
+        #FF8C00 100%     /* Dark Orange */
+    );
+    z-index: 1;
+}
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(180deg, 
+        #90EE90 0%,      /* Light Green */
+        #228B22 100%     /* Forest Green */
+    );
+    z-index: 2;
+}
+
+/* Scroll Section */
+.scroll-section {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    min-height: 200vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 50vh;
+}
+
+/* Flower Container */
+.flower-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flower {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+    will-change: transform, opacity;
+}
+
+/* Pigeons Container */
+.pigeons-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 25;
+    pointer-events: none;
+}
+
+.pigeon {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+    will-change: transform, opacity;
+}
+
+.pigeon1 {
+    top: 20%;
+    left: 15%;
+}
+
+.pigeon2 {
+    top: 25%;
+    right: 15%;
+}
+
+/* Poop Container */
+.poop-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    z-index: 30;
+    pointer-events: none;
+}
+
+.poop {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #6B4423 0%, #3E2723 100%);
+    border-radius: 50%;
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+#poop1 {
+    top: 35%;
+    left: 45%;
+}
+
+#poop2 {
+    top: 40%;
+    right: 42%;
+}
+
+#poop3 {
+    top: 45%;
+    left: 50%;
+}
+
+#poop4 {
+    top: 42%;
+    right: 45%;
+}
+
+/* Spacer for scrolling */
+.spacer {
+    width: 100%;
+    height: 200vh;
+    background: transparent;
+    z-index: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .flower-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .pigeon {
+        width: 180px;
+        height: 180px;
+    }
+
+    .poop-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .scroll-section {
+        padding-top: 40vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .flower-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .pigeon {
+        width: 120px;
+        height: 120px;
+    }
+
+    .poop-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .scroll-section {
+        padding-top: 30vh;
+    }
+}
