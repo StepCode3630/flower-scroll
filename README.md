@@ -8,8 +8,8 @@ Ce projet montre comment faire **pousser une fleur SVG** au scroll et ajouter de
 
 1. **Cloner le projet :**
 ```bash
-git clone <ton-repo-url>
-cd <ton-projet>
+git clone https://github.com/StepCode3630/flower-scroll.git
+cd <flower-scroll>
 ```
 2. **Installer les dépendances:**
 ```bash
